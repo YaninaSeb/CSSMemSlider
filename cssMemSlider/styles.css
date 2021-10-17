@@ -160,3 +160,76 @@ main > input {
     animation: text 0.2s;    
 }   
 
+
+
+
+
+@media (max-width: 425px){
+
+    main {
+        height: 30vh;
+    }
+
+
+    .slider {
+        height: 30vh;
+    }
+
+    .slides img{ 
+        height: 30vh;
+        width: 88vw;
+    }
+    
+    .margin_section {
+        width: 0;
+        height: 0;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    
+    .mems-text>div>p{
+        font-size: 1rem;
+    }
+    
+    
+    .controls {
+        height: 2.5vh;
+        margin: 5vh auto;
+    }   
+    
+    .controls>label {
+        cursor: pointer;
+        display: inline-block;
+        width: 20px
+    }
+    
+    
+    .controls>label>div {
+        height: 8px;
+        width: 8px;
+        border: 2px solid rgb(39, 39, 245);
+        background-color: rgb(39, 39, 245);
+        border-radius: 50%;
+        margin: 5px auto;
+    }
+    
+    @keyframes slidein {
+        from {
+            margin-left: 200vh;
+            width: 100%;
+          }
+        
+          to {
+            margin-left: 0;
+            width: 100%;
+          }
+    }
+
+
+}
+
+
