@@ -80,3 +80,83 @@ main > input {
     border-radius: 50%;
     margin: 13px auto
 }
+
+
+/*момент наведения*/
+.controls>label:nth-of-type(1):hover  div,
+.controls>label:nth-of-type(2):hover  div,
+.controls>label:nth-of-type(3):hover  div,
+.controls>label:nth-of-type(4):hover  div,
+.controls>label:nth-of-type(5):hover  div{
+    background-color: white;
+    border: 2px solid white;
+}
+
+/*момент нажатия*/
+.controls>label:nth-of-type(1):active  div,
+.controls>label:nth-of-type(2):active  div,
+.controls>label:nth-of-type(3):active  div,
+.controls>label:nth-of-type(4):active  div,
+.controls>label:nth-of-type(5):active  div{
+    background-color: rgb(39, 39, 245);
+    border: 2px solid white;
+}
+
+/*активный контрол*/
+.controls>label:nth-of-type(1):visited  div,
+.controls>label:nth-of-type(2):visited  div,
+.controls>label:nth-of-type(3):visited  div,
+.controls>label:nth-of-type(4):visited  div,
+.controls>label:nth-of-type(5):visited  div{
+    background-color: rgb(56, 56, 56);
+    border: 2px solid white;
+}
+
+
+
+
+@keyframes slidein {
+    from {
+        margin-left: 200vh;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 0;
+        width: 100%;
+      }
+}
+
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5  {
+    display: block;
+    animation: slidein 0.3s;    
+}
+
+
+
+@keyframes text {
+    from {
+        margin-left: 30vh;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 0px;
+        width: 100%;
+      }
+}
+
+#slide1:checked ~ .carousel>.mems-text>.slide11,
+#slide2:checked ~ .carousel>.mems-text>.slide12,
+#slide3:checked ~ .carousel>.mems-text>.slide13,
+#slide4:checked ~ .carousel>.mems-text>.slide14,
+#slide5:checked ~ .carousel>.mems-text>.slide15 {
+    display: block;
+    animation: text 0.2s;    
+}   
+
