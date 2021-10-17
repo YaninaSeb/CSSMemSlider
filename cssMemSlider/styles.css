@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+    background-color: rgb(56, 56, 56);
+
+}
+
+main {
+	height: 78vh; /* 850px*/
+    width: 88vw;  /* 1700px*/
+	margin: 5vh auto;
+    border-radius: 2%;
+}
+
+main > input {
+	display: none;
+}
+
+
+.slider {
+	height: 78vh;
+    width: 88vw;
+    border-radius: 2%;   
+    overflow: hidden; 
+}
+
+
+.slides {
+	height: 100%;
+    width: 100%;
+    border-radius: 2%;
+    display: none;
+}
+
+
+.slides img{ 
+    height: 78vh;
+    width: 88vw;
+}
+
+.margin_section {
+    width: 88vw;
+    height: 5.5vh;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.mems-text div{
+    display: none;
+}
+
+.mems-text>div>p{
+    font-size: 2rem;
+    color: white;
+}
+
+
+.controls {
+    height: 5.5vh;
+}
+
+.controls>label {
+	cursor: pointer;
+	display: inline-block;
+    width: 45px;
+    
+}
+
+
+.controls>label>div {
+	height: 15px;
+	width: 15px;
+    border: 2px solid rgb(39, 39, 245);
+    background-color: rgb(39, 39, 245);
+    border-radius: 50%;
+    margin: 13px auto
+}
