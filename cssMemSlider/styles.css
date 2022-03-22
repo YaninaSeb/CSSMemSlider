@@ -1,0 +1,235 @@
+* {
+	margin: 0;
+	padding: 0;
+    background-color: rgb(56, 56, 56);
+    box-sizing: border-box;
+}
+
+main {
+	height: 78vh;
+    width: 88vw;
+	margin: 5vh auto;
+    border-radius: 2%;
+}
+
+main > input {
+	display: none;
+}
+
+
+.slider {
+	height: 78vh;
+    width: 88vw;
+    border-radius: 2%;
+    overflow: hidden; 
+}
+
+.slides {
+	height: 100%;
+    width: 100%;
+    border-radius: 2%;
+    display: none;
+}
+
+
+.slides img{ 
+    height: 78vh;
+    width: 88vw;
+}
+
+.carousel {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.mems-text {
+    width: 60%;
+}
+
+.mems-text div {
+    display: none;
+}
+.mems-text>div>p {
+    font-size: 4vmin;
+    color: white;
+}
+
+
+.controls {
+    width: 40%;
+}
+
+.controls>label {
+	cursor: pointer;
+	display: inline-block;
+    width: 15%;
+    float: right;
+}
+
+
+.controls>label>div {
+	height: 2vmin;
+	width: 2vmin;
+    border: 2px solid rgb(39, 39, 245);
+    background-color: rgb(39, 39, 245);
+    border-radius: 50%;
+    margin-top: 1.5vmin;
+}
+
+
+/*момент наведения*/
+.controls>label:nth-of-type(1):hover  div,
+.controls>label:nth-of-type(2):hover  div,
+.controls>label:nth-of-type(3):hover  div,
+.controls>label:nth-of-type(4):hover  div,
+.controls>label:nth-of-type(5):hover  div{
+    background-color: white;
+    border: 2px solid white;
+}
+
+/*момент нажатия*/
+.controls>label:nth-of-type(1):active  div,
+.controls>label:nth-of-type(2):active  div,
+.controls>label:nth-of-type(3):active  div,
+.controls>label:nth-of-type(4):active  div,
+.controls>label:nth-of-type(5):active  div{
+    background-color: rgb(39, 39, 245);
+    border: 2px solid white;
+}
+
+/*активный контрол*/
+#slide1:checked  div,
+.controls>label:nth-of-type(2):visited  div,
+.controls>label:nth-of-type(3):visited  div,
+.controls>label:nth-of-type(4):visited  div,
+.controls>label:nth-of-type(5):visited  div{
+    background-color: rgb(56, 56, 56);
+    border: 2px solid white;
+}
+
+
+
+
+@keyframes slidein {
+    from {
+        margin-left: 200vh;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 0;
+        width: 100%;
+      }
+}
+
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5  {
+    display: block;
+    animation: slidein 0.3s;    
+}
+
+
+
+@keyframes text {
+    from {
+        margin-left: 30vh;
+        width: 100%;
+      }
+    
+      to {
+        margin-left: 0px;
+        width: 100%;
+      }
+}
+
+#slide1:checked ~ .carousel>.mems-text>.slide11,
+#slide2:checked ~ .carousel>.mems-text>.slide12,
+#slide3:checked ~ .carousel>.mems-text>.slide13,
+#slide4:checked ~ .carousel>.mems-text>.slide14,
+#slide5:checked ~ .carousel>.mems-text>.slide15 {
+    display: block;
+    animation: text 0.2s;    
+}   
+
+
+
+
+
+@media (max-width: 425px){
+
+    main {
+        height: 30vh;
+    }
+
+    .slider {
+        height: 30vh;
+    }
+
+    .slides img{ 
+        height: 30vh;
+        width: 88vw;
+    }
+    
+    .margin_section {
+        width: 0;
+        height: 0;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .mems-text {
+        width: 100%;
+    }
+    
+    .mems-text>div>p{
+        font-size: 1rem;
+    }
+    
+    
+    .controls {
+        height: 2.5vh;
+        margin: 5vh auto;
+    }   
+    
+    .controls>label {
+        cursor: pointer;
+        display: inline-block;
+        width: 20px
+    }
+    
+    
+    .controls>label>div {
+        height: 8px;
+        width: 8px;
+        border: 2px solid rgb(39, 39, 245);
+        background-color: rgb(39, 39, 245);
+        border-radius: 50%;
+        margin: 5px auto;
+    }
+    
+    @keyframes slidein {
+        from {
+            margin-left: 200vh;
+            width: 100%;
+          }
+        
+          to {
+            margin-left: 0;
+            width: 100%;
+          }
+    }
+
+
+}
+
+
